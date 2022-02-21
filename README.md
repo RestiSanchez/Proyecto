@@ -38,7 +38,7 @@ Imagen rapsberry Pi 4
 
 Lo primero que vamos a necesitar una vez reunidos nuestro hardware será descargar el software que vamos a usar para montarnos el NAS. 
 
-[https://www.openmediavault.org](OpenMediaVault) 
+[OpenMediaVault](https://www.openmediavault.org) 
 
 Este software es la distribución que se basa en montar tu propio NAS
 
@@ -47,10 +47,10 @@ Este software es la distribución que se basa en montar tu propio NAS
 Una vez descarga la ISO utilizaremos Rapberry Pi Imager https://www.raspberrypi.com/software/   
 Desde la misma página de Rapsberry puedes descargalo.
 
-[/imgs/rpi1.png]
+![Rapsberri Pi Imager](https://github.com/RestiSanchez/Proyecto/blob/main/imgs/rpi1.png)
 
 Se puede utilizar otros programas como ApplePiBacker o BerryBoot , introduce tu tarjeta microSD con un adaptador al ordenador y selecciona el sistema operativo que quieres utilizar. Una vez terminado el proceso , introduce la tarjeta en la Rapsberry Pi , conecta los discos USBs o por SATA y enciendela.
 
-[/imgs/rpi2.png]
+![Seleccionar custom](https://github.com/RestiSanchez/Proyecto/blob/main/imgs/rpi2.png)
 
 
