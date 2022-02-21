@@ -44,7 +44,7 @@ Este software es la distribución que se basa en montar tu propio NAS
 
 ##### Proceso de instalación OpenMediaVault en MicroSD
 
-Una vez descarga la ISO utilizaremos Rapberry Pi Imager https://www.raspberrypi.com/software/   
+Una vez descarga la ISO utilizaremos [Rapsberry Pi Imager](https://www.raspberrypi.com/software/)
 Desde la misma página de Rapsberry puedes descargalo.
 
 ![Rapsberri Pi Imager](https://github.com/RestiSanchez/Proyecto/blob/main/imgs/rpi1.png)
