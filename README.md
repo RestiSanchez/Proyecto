@@ -1,4 +1,4 @@
-# Rapsberry Pi como NAS en pequeñas empresas u hogares
+# Rapsberry Pi como NAS en pequeñas empresas u hogares con VPN propia
 
 ### ¿Qué es una Rapsberry Pi y para qué sirve?
 
@@ -20,7 +20,7 @@ Una de las carácterísticas principales de un NAS es que puede ofrecer una fuer
 
 ## ¿Por qué crear un NAS con una Rapsberry Pi?
 
-Primero comentar de que existen una variedad inmesas de modelos de NAS de marcas reconocidas como Synology o QNAP entre otros pero con un precio bastante elevado.
+Primero comentar de que existen una variedad inmesas de modelos de NAS de marcas reconocidas como Synology o QNAP entre otros pero con un precio bastante elevado. Y con esta opción reducirás bastante los precios y para una opción 
 
 Si prefieres montarte tu propio NAS tendrás la libertad para ampliar o no cuando lo necesites y para trastear todo lo necesario , crear tu propio NAS con una Rapsberry Pi es más económico y si eres paciente tendrás lo que buscas!
 
@@ -114,6 +114,12 @@ Nos dirigimos a la primera ruta comentada de este apartado y habilitamos el SSL 
 
 ![image](https://user-images.githubusercontent.com/14905801/155128082-b2ac03ea-0ad6-4cc0-b07e-fbe6e4b5f27d.png)
 
+#### Cambio de contraseña de administrador
+
+Nos vamos a opciones generales , contraseña de administrador e ingresamos la nueva contraseña:
+
+![image](https://user-images.githubusercontent.com/14905801/155128757-bb521466-2b45-4850-912d-b99f0ef7371b.png)
+
 
 #### Configuración de discos 
 
@@ -121,11 +127,38 @@ Una vez ingresado en nuestro navegador y accedido al servidor , seleccionamos di
 
 ![image](https://user-images.githubusercontent.com/14905801/155126870-9451e155-0b36-4b84-bc63-c551c7a07c3b.png)
 
+#### Configuración de perfil de usuario
+
+Nos vamos a la opción " Usuario " . Seleccionamos la opción " Añadir " y rellenamos los datos.
+
+En este apartado podemos agregar y eliminar perfiles de acceso al server NAS , podemos modificar los permisos de acceso de estos perfiles. Despues de ingresar un usuario , lo seleccionamos y pulsamos en " Modificar acceso ". Podremos otogar o revocar permisos a los usuarios para que puedan moficar el contenido almacenado , permisos de solo lectura o ningun permiso.
+
+#### Métodos para ingresar al servidor
+
+- Linux -> Accedemos al administrador de archivos y seleccionamos "Conectar al servidor" , cuando nos pida ingresar una dirección tendremos que introducir un prefijo "sbm://" Por lo que quedaria algo asi:
+
+Ejemplo: sbm://192.168.1.36
+
+- Windows -> Nos vamos al explorador de archivos y en la ubicación escribimos el prefijo "\\":
+
+Ejemplo: \\192.168.1.36
+
+Y ya estariamos accediendo a nuestro servidor NAS de nuestra Rapsberry Pi!
+
+## Conclusión
+
+Para empezar me gustaria comentar el punto de vista dentro de una empresa:
+Me parece un recurso bastante útil para realizar copias de seguridad a los equipos de forma autónoma y se guarde en red en un disco duro de este aparato. Además cada trabajador puede tener su propia carpeta dentro de otro disco duro donde almacenar datos que se utilizan a diario. Es nuestro propio servidor de almacenamiento en red muy económico , pero es muy útil si queremos tener separadas nuestras copias de seguridad o si se necesita acceder al contenido desde varios equipos sin depender de un server dedicado.
+
+Para las copias de seguridad y que puedan trabajar con esos archivos trabajaria directamente en una red interna para que solo los trabajadores de esa empresa se pudieran conectar. Además se podría añadir tu propia VPN como he explicado con anterioridad para aumentar la seguridad y también  
 
 
 
+### Extensiones
 
-
+- servicio de impresion 
+- servicio de escaner en red
+- servicio VPN propio
 
 
 
