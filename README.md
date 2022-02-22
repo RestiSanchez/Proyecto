@@ -73,9 +73,21 @@ Volvemos a meter la contraseña para su verificación e ingresamos la zona horar
 
 ![image](https://user-images.githubusercontent.com/14905801/155091469-51c51845-a4f6-4ad3-882d-0557a30f00df.png)
 
+Una vez finalizada pulsamos en continuar y se nos inciará OpenMediaVault
 
+### Configuración de OpenMediaVault
 
+Primero debemos saber que ip tiene nuestra rapsberry 
 
+Utilizamos el comando " ip a " para saber la IP de nuestra máquina y procedemos a introducirla en nuestro navegador:
 
+![image](https://user-images.githubusercontent.com/14905801/155123290-fcfc38ea-2318-4422-bf58-09b766504a8c.png)
+
+Nos pedirá un usuario y una contraseña para acceder , por defecto los credenciales de inicio de sesión son:
+
+Nombre de usuario: " admin "
+Contraseña: " openmediavault "
+
+![image](https://user-images.githubusercontent.com/14905801/155123476-ea2ac2c0-6bc1-471b-be0a-9f6cba4d2327.png)
 
 
