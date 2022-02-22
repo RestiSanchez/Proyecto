@@ -53,4 +53,29 @@ Se puede utilizar otros programas como ApplePiBacker o BerryBoot , introduce tu 
 
 ![Seleccionar custom](https://github.com/RestiSanchez/Proyecto/blob/main/imgs/rpi2.png)
 
+### Instalación OpenMediaVault
+
+![image](https://user-images.githubusercontent.com/14905801/155089913-f13a57da-cfa6-4d5c-a1ca-ad2ef4c67606.png)
+
+Comenzamos con la instalación una vez iniciada nuestra rapsberry , automáticamente avanza hasta instalar , seleccionamos el idioma y el teclado que vamos a utilizar , comenzará a cargar la configuración de red:
+
+![image](https://user-images.githubusercontent.com/14905801/155090431-80780900-7cff-475d-903b-46e40c917138.png)
+
+Escribimos el nombre del dominio o del grupo de trabajo que estás utilizando:
+
+![image](https://user-images.githubusercontent.com/14905801/155090693-7f89295a-b78d-43db-b3d2-c3c76ef26baa.png)
+
+Avanzamos y ahora nos pide ingresar una contraseña para el usuario root , se puede dejar en blanco , creandote un usuario con permisos de administrador utilizando la orden " sudo " de forma automática
+
+![image](https://user-images.githubusercontent.com/14905801/155091176-4bc9d6af-4926-4cd7-9c7c-4c67d207e5aa.png)
+
+Volvemos a meter la contraseña para su verificación e ingresamos la zona horaria donde estamos , una vez seleccionada la zona , comenzará la instalación:
+
+![image](https://user-images.githubusercontent.com/14905801/155091469-51c51845-a4f6-4ad3-882d-0557a30f00df.png)
+
+
+
+
+
+
 
