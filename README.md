@@ -79,15 +79,58 @@ Una vez finalizada pulsamos en continuar y se nos inciará OpenMediaVault
 
 Primero debemos saber que ip tiene nuestra rapsberry 
 
-Utilizamos el comando " ip a " para saber la IP de nuestra máquina y procedemos a introducirla en nuestro navegador:
+Utilizamos el comando " ip a " para saber la IP de nuestra máquina:
 
 ![image](https://user-images.githubusercontent.com/14905801/155123290-fcfc38ea-2318-4422-bf58-09b766504a8c.png)
 
-Nos pedirá un usuario y una contraseña para acceder , por defecto los credenciales de inicio de sesión son:
+A continuación con el comando: " sudo nano /etc/network/interfaces "
+
+Escribimos nuestra IP estática del servidor
+
+![image](https://user-images.githubusercontent.com/14905801/155126059-c478a47e-cd03-41a9-951f-36818e22a7bb.png)
+
+Reiniciamos las interfaces de red para aplicar los cambios:
+
+" sudo /etc/init.d/networking restart "
+
+![image](https://user-images.githubusercontent.com/14905801/155126218-ca4e89f1-c016-4f89-b2a5-999880b5babe.png)
+
+Y procedemos a introducirla en nuestro navegador , nos pedirá un usuario y una contraseña para acceder , por defecto los credenciales de inicio de sesión son:
 
 Nombre de usuario: " admin "
 Contraseña: " openmediavault "
 
 ![image](https://user-images.githubusercontent.com/14905801/155123476-ea2ac2c0-6bc1-471b-be0a-9f6cba4d2327.png)
+
+### Configuración certificados SSL
+
+Ya con acceso al servidor seguimos la siguiente ruta: "Sistema" -> "Opciones generales" -> "Conexión segura" 
+
+Para utilizar la conexión segura necesitas un certificado , para crear este certificado hay que entrar en "Sistema" -> "Certificados" y haz click sobre SSL , luego pulsa "Añadir" y "Guardar" tras ingresar los datos. Hay que habilitar el certificado en los ajustes generales y aplicar cambios.
+
+![image](https://user-images.githubusercontent.com/14905801/155127858-841c0ed5-a90f-4aaa-91a4-6f6d3944fe6d.png)
+
+Nos dirigimos a la primera ruta comentada de este apartado y habilitamos el SSL , seleccionando el certificado creado en el paso anterior:
+
+![image](https://user-images.githubusercontent.com/14905801/155128082-b2ac03ea-0ad6-4cc0-b07e-fbe6e4b5f27d.png)
+
+
+#### Configuración de discos 
+
+Una vez ingresado en nuestro navegador y accedido al servidor , seleccionamos discos en la parte izquierda para configurar los discos duros que podemos utilizar: 
+
+![image](https://user-images.githubusercontent.com/14905801/155126870-9451e155-0b36-4b84-bc63-c551c7a07c3b.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
