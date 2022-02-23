@@ -127,6 +127,21 @@ Una vez ingresado en nuestro navegador y accedido al servidor , seleccionamos di
 
 ![image](https://user-images.githubusercontent.com/14905801/155126870-9451e155-0b36-4b84-bc63-c551c7a07c3b.png)
 
+Ahora nos vamos a Sistema de Archivos y pulsamos en añadir y seleccionamos el formato para inicializar los discos y el disco que queramos inicializar
+
+![image](https://user-images.githubusercontent.com/14905801/155285951-1865d0e5-78e6-44ff-9273-7091a3f016e0.png)
+
+Otra cosa que podemos apreciar aquí son las cuotas que se le pueden poner a usuario/s o grupo/s como podemos ver en la siguiente imagen , limitando la cantidad de datos que pueden meter en el disco.
+
+![image](https://user-images.githubusercontent.com/14905801/155287392-071c62c6-f853-4133-b09d-1f7b8d19ad3c.png)
+
+
+Y ahora nos vamos a Carpeta compartida y pulsamos en añadir y creamos nuestra carpeta o sistema de carpetas:
+
+![image](https://user-images.githubusercontent.com/14905801/155286444-451a0006-443a-43df-808b-336c249fc8c3.png)
+
+Tendremos una serie de permisos para cada usuario/grupo que depende de cada carpeta/s variarán según lo que deseemos hacer.
+
 #### Configuración de perfil de usuario
 
 Nos vamos a la opción " Usuario " . Seleccionamos la opción " Añadir " y rellenamos los datos.
@@ -148,9 +163,9 @@ Y ya estariamos accediendo a nuestro servidor NAS de nuestra Rapsberry Pi!
 ## Conclusión
 
 Para empezar me gustaria comentar el punto de vista dentro de una empresa:
-Me parece un recurso bastante útil para realizar copias de seguridad a los equipos de forma autónoma y se guarde en red en un disco duro de este aparato. Además cada trabajador puede tener su propia carpeta dentro de otro disco duro donde almacenar datos que se utilizan a diario. Es nuestro propio servidor de almacenamiento en red muy económico , pero es muy útil si queremos tener separadas nuestras copias de seguridad o si se necesita acceder al contenido desde varios equipos sin depender de un server dedicado.
+Me parece un recurso bastante útil para realizar copias de seguridad a los equipos de forma autónoma y se guarde en red en un disco duro de este equipo. Además cada trabajador puede tener su propia carpeta dentro de otro disco duro donde almacenar datos que se utilizan a diario. Es nuestro propio servidor de almacenamiento en red muy económico , pero es muy útil si queremos tener separadas nuestras copias de seguridad o si se necesita acceder al contenido desde varios equipos sin depender de un server dedicado.
 
-Para las copias de seguridad y que puedan trabajar con esos archivos trabajaria directamente en una red interna para que solo los trabajadores de esa empresa se pudieran conectar. Además se podría añadir tu propia VPN como he explicado con anterioridad para aumentar la seguridad y también  
+Para las copias de seguridad y que puedan trabajar con esos archivos trabajaria directamente en una red interna para que solo los trabajadores de esa empresa se pudieran conectar. Además se podría añadir tu propia VPN como he explicado con anterioridad para aumentar la seguridad y también la productividad pudiendo trabajar y acceder a los recursos en red desde cualquier punto con conexion a Internet.
 
 
 
