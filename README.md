@@ -251,6 +251,11 @@ Me parece un recurso bastante útil para realizar copias de seguridad a los equi
 
 Para las copias de seguridad y que puedan trabajar con esos archivos trabajaria directamente en una red interna para que solo los trabajadores de esa empresa se pudieran conectar. Además se podría añadir tu propia VPN como he explicado con anterioridad para aumentar la seguridad y también la productividad pudiendo trabajar y acceder a los recursos en red desde cualquier punto con conexion a Internet.
 
+### Asistente de configuración de OpenMediaVault
+
+Se puede abrir el asistente utilizando 
+
+  omv-firstaid
 
 
 ### Extensiones
@@ -260,9 +265,11 @@ Para las copias de seguridad y que puedan trabajar con esos archivos trabajaria 
 - servicio VPN propio
 
 
-
-
-
-
-
+### FUENTES
+- https://www.geeknetic.es/Guia/2138/Como-convertir-una-Raspberry-Pi-en-un-NAS.html
+- https://www.hostinger.es/tutoriales/como-configurar-vpn-linux-con-openvpn
+- https://chachocool.com/como-instalar-docker-en-debian-10-buster/
+- https://eloutput.com/productos/gadgets/raspberry-pi-nas-ventajas-desventajas/
+- https://nefele.dev/blog/gestor-de-dns-dinamicas-duckdns/#:~:text=Para%20crear%20nuestra%20dirección%20DDns,queramos%20para%20nuestro%20subdomino%20DDns.
+- https://www.youtube.com/watch?v=UDGtzAncVMI
 
