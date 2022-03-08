@@ -1,5 +1,20 @@
 # Rapsberry Pi como NAS en pequeñas empresas u hogares con VPN propia
 
+## Indice
+  - ¿Qué es una Rapberry Pi y para que sirve?
+  - ¿Qué es un NAS?
+  - ¿Por qué crear un NAS con una Rapsberry Pi?
+  - Como crear tu propio NAS con la Rapsberry Pi 4
+  - Instalación de OpenMediaVault
+  - Configuración de OpenMediaVault
+  - Configuración de certificados SSL
+  - Cambio de contrasñea de administrador
+  - Configuración de discos
+  - Configuración de perfil de usuario
+  - Métodos para ingresar al servidor
+  - Utilizar OpenVPN con OpenMediaVault
+  - Conclusión
+
 ### ¿Qué es una Rapsberry Pi y para qué sirve?
 
 Es un ordenador de bajo coste y formato compacto destinado al desarrollado para hacer accesible la informática a todos los usuarios.
