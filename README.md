@@ -77,6 +77,20 @@ Cambiamos la contraseña una vez logeado con:
 passwd
 ~~~
 
+Activamos y ejecutamos el ssh con:
+
+~~~
+sudo systemctl enable ssh
+
+sudo systemctl start ssh
+~~~
+
+Si no esta instalado Git para clonar nuestro repositorio , lo instalamos con:
+
+~~~
+sudo apt install git
+~~~
+
 Ahora nos descargariamos el script desde github , haciendo un git clone de este repositorio
 ~~~
 git clone https://github.com/RestiSanchez/Proyecto.git
