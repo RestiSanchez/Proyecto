@@ -14,6 +14,8 @@
   - Métodos para ingresar al servidor
   - Utilizar OpenVPN con OpenMediaVault
   - Conclusión
+  - Fuentes
+  - Ayuda con la instalación
 
 ### ¿Qué es una Rapsberry Pi y para qué sirve?
 
@@ -162,78 +164,7 @@ deb-src http://httpredir.debian.org/debian buster main non-free contrib
 "
 ![image](https://user-images.githubusercontent.com/14905801/155306261-06615565-4674-4e8e-98cb-7162dfaa54db.png)
 
-** PRIMERA OPCION CON DOCKER **
 
-Lo primero seria como instalar el repositorio de Docker para Debian 10 en nuestro caso:
-
-$ sudo nano /etc/apt/sources.list.d/docker.list
-El contenido será la siguiente línea:
-
-deb [arch=amd64] https://download.docker.com/linux/debian buster stable
-
-![image](https://user-images.githubusercontent.com/14905801/155314981-f769d599-d1d5-4f38-b12f-815fa0581102.png)
-
-
-Como el nuevo repositorio está firmado, es necesario instalar la clave pública:
-
-~$ wget https://download.docker.com/linux/debian/gpg -O- | sudo apt-key add
-![image](https://user-images.githubusercontent.com/14905801/155315137-234c81fe-a11f-4e31-b1d7-171cb926f4dd.png)
-
-
-Actualizamos los repositorios, incluyéndose ya también el de Docker:
-
-~$ sudo apt update
-
-Para instalar el docker en debian 10 
-
-~$ sudo apt install -y docker-ce docker-ce-cli containerd.io
-
-![image](https://user-images.githubusercontent.com/14905801/155315299-ff29dae7-7bff-4379-b003-611d14ec7463.png)
-
-Podemos comprobar ahora que funciona docker 
-
-![image](https://user-images.githubusercontent.com/14905801/155315399-6f416eeb-df98-4896-8fa9-fc2076ed094e.png)
-
-*******************************************************************
-Tendiramos que abrir puertos , probar en casa:
-
-Aunque vamos a probarlo a instalar normal
-![image](https://user-images.githubusercontent.com/14905801/155306378-0d7ac609-2b47-4e68-9be6-d6fe9a69fc90.png)
-
-
-
-*** SEGUNDA OPCION INSTALAR OpenVPN directament ***
-
-Necesitamos los siguientes comandos
-
-1º Net-tools
-
-sudo apt install net-tools
-
-sudo apt install curl
-
-curl -O http://swupdate.openvpn.org/as/openvpn-as_2.10.1-d5bffc76-Debian10_amd64.deb
-
-![image](https://user-images.githubusercontent.com/14905801/155310948-fd12747b-09bf-4382-9794-8c7e87668056.png)
-
-Aqui podeis ver que versiones tienen disponibles y para que sistemas operativos:
-https://openvpn.net/vpn-software-packages/
-
-
-Descomprimimos el archivo con el comando
-
-sudo dpkg -i openvpn-as-*.deb (donde * es la version de debian como aparece en el paso anterior)
-En mi caso seria sudo dpkg -i openvpn-as_2.10.1-d5bffc76-Debian10_amd64.deb
-
-![image](https://user-images.githubusercontent.com/14905801/155308234-e6f1c1da-7e28-487e-9628-89e0d52e8583.png)
-
-** IMPORTANTE ** 
-Si nos sale este error necesitaremos instalar las dependencias de OpenVpn con el comando de debajo de la imagen!
-
-![image](https://user-images.githubusercontent.com/14905801/155311388-3d9d133f-c7bd-49e0-9455-bd460ff1fd3a.png)
-
-
-apt install -y bridge-utils dmidecode iptables iproute2 net-tools libc6 libffi6 libgcc1 liblz4-1 liblzo2-2 libmariadb3 libpcap0.8 libssl1.1 libstdc++6 zlib1g libsasl2-2 libsqlite3-0 python3-pkg-resources python3-migrate python3-sqlalchemy python3-mysqldb libmariadbd19 python3-ldap3 sqlite3
 
 
 
