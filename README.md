@@ -169,13 +169,15 @@ En este apartado podemos agregar y eliminar perfiles de acceso al server NAS , p
 - Linux -> Accedemos al administrador de archivos y seleccionamos "Conectar al servidor" , cuando nos pida ingresar una dirección tendremos que introducir un prefijo "sbm://" Por lo que quedaria algo asi:
 
 Ejemplo: 
-~~~sbm://192.168.1.36
+~~~
+sbm://192.168.1.36
 ~~~
 
 - Windows -> Nos vamos al explorador de archivos y en la ubicación escribimos el prefijo "\\":
 
 Ejemplo: 
-~~~\\192.168.1.36
+~~~
+\\192.168.1.36
 ~~~
 
 Y ya estariamos accediendo a nuestro servidor NAS de nuestra Rapsberry Pi!
@@ -184,7 +186,8 @@ Y ya estariamos accediendo a nuestro servidor NAS de nuestra Rapsberry Pi!
 
 Lo primero que vamos a hacer es añadir unos repositorios a la lista que nos trae OpenMediaVault (Solo nos trae dos) y para solucionar el problema con la instalacion de programas necesitaremos añadir estos dos repositorios a la lista de "" /etc/apt/sources.list ""
 
-~~~ deb http://httpredir.debian.org/debian buster main non-free contrib
+~~~ 
+deb http://httpredir.debian.org/debian buster main non-free contrib
 deb-src http://httpredir.debian.org/debian buster main non-free contrib
 ~~~
 ![image](https://user-images.githubusercontent.com/14905801/155306261-06615565-4674-4e8e-98cb-7162dfaa54db.png)
