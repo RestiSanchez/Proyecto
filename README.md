@@ -187,17 +187,41 @@ Y ya estariamos accediendo a nuestro servidor NAS de nuestra Rapsberry Pi!
 
 ### Utilizar OpenVPN con OpenMediaVault 
 
-Lo primero que vamos a hacer es añadir unos repositorios a la lista que nos trae OpenMediaVault (Solo nos trae dos) y para solucionar el problema con la instalacion de programas necesitaremos añadir estos dos repositorios a la lista de "" /etc/apt/sources.list ""
+#### Instalación OpenVPN
 
-~~~ 
-deb http://httpredir.debian.org/debian buster main non-free contrib
-deb-src http://httpredir.debian.org/debian buster main non-free contrib
+Lo primero que necesitamos es para instalar PiVPN en nuestro sistema raspian
 ~~~
-![image](https://user-images.githubusercontent.com/14905801/155306261-06615565-4674-4e8e-98cb-7162dfaa54db.png)
+curl -L https://install.pivpn.io | bash
+~~~
+Una vez finalizado , se iniciara el asistente de instalación con distintos parametros:
 
+Pasos a seguir dentro del asistente:
+1. Ok
+2. Ok
+3. No para utilizar la IP estática (Tabulador para moverse entre opciones)
+4. Ok
+5. Ok
+6. Elegimos el usuario pi y Ok
+7. Seleccionamos OpenVPN(Con espacio) y pulsamos Ok
+8. Pulsamos en Yes para seleccionar las opciones personalizadas
+9. Seleccionamos TCP y pulsamos OK
+10. Ahora nos pide un puerto que necesitamos abrir en nuestro router en nuestro caso vamos a utilzar el puerto 1194 que lo tengo abierto en mi router pero podeis utilizar cualquier puerto que no vayais a utilizar con otro servicio.
+11. Pulsamos Yes para aceptar
+12. Ahora en la lista de DNS que aparece bajamos y seleccionamos la opción de Custom , pulsamos Ok
+13. Ahora introducimos las DNS de nuestra compañia , pulsamos en Ok
+14. Pulsamos Yes
+15. Ahora nos pide si tenemos algún dominio , pulsamos que no 
+16. En este paso nos pide si vamos a utilizar nuestra IP publica o un DNS , en mi caso prefiero utilizar una entrada DNS como https://www.duckdns.org para generar mi DNS gratuito
+17. Nos pregunta si es correcto y pulsamos en yes
+18. Pulsamos en Yes para configurar el tamaño del certificado
+19. Aqui elegimos 256 , si queremos mas seguridad a costa de la velocidad podemos aumentar el tamaño y pulsamos en Ok , ahora la clave se generará
+20. Ahora nos da información sobre que tenemos que abrir el puerto que hemos puesto a internet y que es recomendable activar las actualizaciones desatendidas , pulsamos en Ok
+21. Activamos las actualizaciones desantendidas y pulsamos en Yes
+22. Ya estaría instalado PiVPN , ahora nos preguntará si queremos reiniciar despues de la instalación y pulsamos en Yes
 
+#### Añadir una VPN
 
-
+Una vez reiniciado el dispositivo , iniciamos sesión y escribimos:
 
 ## Conclusión
 
