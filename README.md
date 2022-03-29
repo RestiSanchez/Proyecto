@@ -111,7 +111,8 @@ Reiniciamos las interfaces de red para aplicar los cambios:
 sudo /etc/init.d/networking restart 
 ~~~
 
-![image](https://user-images.githubusercontent.com/14905801/155126218-ca4e89f1-c016-4f89-b2a5-999880b5babe.png)
+![image](https://user-images.githubusercontent.com/14905801/160607727-58763e43-9a39-4c0e-8603-387854d5299b.png)
+
 
 Y procedemos a introducirla en nuestro navegador , nos pedirá un usuario y una contraseña para acceder , por defecto los credenciales de inicio de sesión son:
 
