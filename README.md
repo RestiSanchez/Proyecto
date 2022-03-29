@@ -51,13 +51,9 @@ Imagen rapsberry Pi 4
   - Unidades de almacenamiento USB o con una placa que añade conexiones SATA a la Rapsberry Pi añadir unos discos HDD o SSD aumentando la velocidad de transferencia
   - Una tarjeta microSD para la instalación 
 
-#### Instalación de OpenMediaVault
+### Instalación de OpenMediaVault
 
-Lo primero que vamos a necesitar una vez reunidos nuestro hardware será descargar el software que vamos a usar para montarnos el NAS. 
 
-[OpenMediaVault](https://www.openmediavault.org) 
-
-Este software es la distribución que se basa en montar tu propio NAS
 
 ##### Proceso de instalación OpenMediaVault en MicroSD
 
@@ -68,7 +64,16 @@ Desde la misma página de Rapsberry puedes descargalo.
 
 Se puede utilizar otros programas como ApplePiBacker o BerryBoot , introduce tu tarjeta microSD con un adaptador al ordenador y selecciona el sistema operativo que quieres utilizar. Una vez terminado el proceso , introduce la tarjeta en la Rapsberry Pi , conecta los discos USBs o por SATA y enciendela.
 
-![Seleccionar custom](https://github.com/RestiSanchez/Proyecto/blob/main/imgs/rpi2.png)
+Seleccionamos la opción de Raspberry Pi OS (other) y dentro seleccionamos una imagen del sistema que nosotros queramos , en mi caso como no quiero versión de escritorio utilizo la Raspberry Pi OS lite (Legacy) que contiene unas actualizaciones de seguridad que en las otras versiones no tienen.
+
+![image](https://user-images.githubusercontent.com/14905801/160571762-d13bcc59-4f09-4a4c-b67d-357147ed5b9c.png)
+
+Lo metemos en nuestra tarjeta micro SD y a nuestra rapsberry , la iniciamos y nos logeamos con el usuario y contraseña por defecto :
+- Usuario: pi
+- Contraseña: raspberry
+
+Ahora nos descargariamos el script desde github , haciendo un git clone de este repositorio
+
 
 ### Configuración de OpenMediaVault
 
