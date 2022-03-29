@@ -72,13 +72,18 @@ Lo metemos en nuestra tarjeta micro SD y a nuestra rapsberry , la iniciamos y no
 - Usuario: pi
 - Contraseña: raspberry
 
+Cambiamos la contraseña una vez logeado con:
+~~~
+passwd
+~~~
+
 Ahora nos descargariamos el script desde github , haciendo un git clone de este repositorio
 ~~~
 git clone https://github.com/RestiSanchez/Proyecto.git
 ~~~
 Una vez clonado en consola puedes escribir:
 
-Cambiamos al directorio
+Cambiamos al directorio del repositorio
 ~~~
 cd /Proyecto/  
 
