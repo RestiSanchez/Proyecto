@@ -77,31 +77,10 @@ Cambiamos la contraseña una vez logeado con:
 passwd
 ~~~
 
-Activamos y ejecutamos el ssh con:
+Ahora nos descargariamos el script desde github , haciendo un wget de este repositorio para coger el script
 
 ~~~
-sudo systemctl enable ssh
-
-sudo systemctl start ssh
-~~~
-
-Si no esta instalado Git para clonar nuestro repositorio , lo instalamos con:
-
-~~~
-sudo apt install git
-~~~
-
-Ahora nos descargariamos el script desde github , haciendo un git clone de este repositorio
-~~~
-git clone https://github.com/RestiSanchez/Proyecto.git
-~~~
-Una vez clonado en consola puedes escribir:
-
-Cambiamos al directorio del repositorio
-~~~
-cd /Proyecto/  
-
-sudo bash OMV_script.sh
+wget https://github.com/RestiSanchez/Proyecto/blob/d23b97822163d3426e702f7461cefe1766eb5bfb/OMV_script.sh | sudo bash
 ~~~
 Con este script lo que hacemos es , actualizar los repositorios , activar el ssh que viene por defecto desactivado e instalar el OpenMediaVault desde consola.
 
