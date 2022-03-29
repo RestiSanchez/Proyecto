@@ -73,7 +73,18 @@ Lo metemos en nuestra tarjeta micro SD y a nuestra rapsberry , la iniciamos y no
 - Contraseña: raspberry
 
 Ahora nos descargariamos el script desde github , haciendo un git clone de este repositorio
+~~~
+git clone https://github.com/RestiSanchez/Proyecto.git
+~~~
+Una vez clonado en consola puedes escribir:
 
+Cambiamos al directorio
+~~~
+cd /Proyecto/  
+
+sudo bash OMV_script.sh
+~~~
+Con este script lo que hacemos es , actualizar los repositorios , activar el ssh que viene por defecto desactivado e instalar el OpenMediaVault desde consola.
 
 ### Configuración de OpenMediaVault
 
@@ -83,7 +94,9 @@ Utilizamos el comando " ip a " para saber la IP de nuestra máquina:
 
 ![image](https://user-images.githubusercontent.com/14905801/155123290-fcfc38ea-2318-4422-bf58-09b766504a8c.png)
 
-A continuación con el comando: " sudo nano /etc/network/interfaces "
+A continuación con el comando: 
+~~~ sudo nano /etc/network/interfaces 
+~~~
 
 Escribimos nuestra IP estática del servidor
 
@@ -91,7 +104,8 @@ Escribimos nuestra IP estática del servidor
 
 Reiniciamos las interfaces de red para aplicar los cambios:
 
-" sudo /etc/init.d/networking restart "
+~~~ sudo /etc/init.d/networking restart 
+~~~
 
 ![image](https://user-images.githubusercontent.com/14905801/155126218-ca4e89f1-c016-4f89-b2a5-999880b5babe.png)
 
@@ -152,11 +166,15 @@ En este apartado podemos agregar y eliminar perfiles de acceso al server NAS , p
 
 - Linux -> Accedemos al administrador de archivos y seleccionamos "Conectar al servidor" , cuando nos pida ingresar una dirección tendremos que introducir un prefijo "sbm://" Por lo que quedaria algo asi:
 
-Ejemplo: sbm://192.168.1.36
+Ejemplo: 
+~~~sbm://192.168.1.36
+~~~
 
 - Windows -> Nos vamos al explorador de archivos y en la ubicación escribimos el prefijo "\\":
 
-Ejemplo: \\192.168.1.36
+Ejemplo: 
+~~~\\192.168.1.36
+~~~
 
 Y ya estariamos accediendo a nuestro servidor NAS de nuestra Rapsberry Pi!
 
@@ -164,9 +182,9 @@ Y ya estariamos accediendo a nuestro servidor NAS de nuestra Rapsberry Pi!
 
 Lo primero que vamos a hacer es añadir unos repositorios a la lista que nos trae OpenMediaVault (Solo nos trae dos) y para solucionar el problema con la instalacion de programas necesitaremos añadir estos dos repositorios a la lista de "" /etc/apt/sources.list ""
 
-" deb http://httpredir.debian.org/debian buster main non-free contrib
+~~~ deb http://httpredir.debian.org/debian buster main non-free contrib
 deb-src http://httpredir.debian.org/debian buster main non-free contrib
-"
+~~~
 ![image](https://user-images.githubusercontent.com/14905801/155306261-06615565-4674-4e8e-98cb-7162dfaa54db.png)
 
 
@@ -183,9 +201,9 @@ Para las copias de seguridad y que puedan trabajar con esos archivos trabajaria 
 ### Asistente de configuración de OpenMediaVault
 
 Se puede abrir el asistente utilizando 
-
+~~~
   omv-firstaid
-
+~~~
 
 ### Extensiones
 
