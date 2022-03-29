@@ -95,7 +95,8 @@ Utilizamos el comando " ip a " para saber la IP de nuestra máquina:
 ![image](https://user-images.githubusercontent.com/14905801/155123290-fcfc38ea-2318-4422-bf58-09b766504a8c.png)
 
 A continuación con el comando: 
-~~~ sudo nano /etc/network/interfaces 
+~~~ 
+sudo nano /etc/network/interfaces 
 ~~~
 
 Escribimos nuestra IP estática del servidor
@@ -104,7 +105,8 @@ Escribimos nuestra IP estática del servidor
 
 Reiniciamos las interfaces de red para aplicar los cambios:
 
-~~~ sudo /etc/init.d/networking restart 
+~~~ 
+sudo /etc/init.d/networking restart 
 ~~~
 
 ![image](https://user-images.githubusercontent.com/14905801/155126218-ca4e89f1-c016-4f89-b2a5-999880b5babe.png)
