@@ -17,8 +17,6 @@ adduser pi ssh
 # Instalamos git
 apt install git
 
-# Clonamos el repositorio para la instalacion posterior de OpenVPN
-git clone https://github.com/RestiSanchez/Proyecto.git
 
 # Activamos y ejecutamos el ssh con:
 
