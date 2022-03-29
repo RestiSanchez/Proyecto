@@ -81,20 +81,22 @@ Ahora nos descargariamos el script desde github , haciendo un wget de este repos
 
 ~~~
 wget -O - https://raw.githubusercontent.com/RestiSanchez/Proyecto/main/OMV_script.sh | sudo bash
-
-
 ~~~
 Con este script lo que hacemos es , actualizar los repositorios , activar el ssh que viene por defecto desactivado e instalar el OpenMediaVault desde consola.
 
+Esperamos que termine y abrimos un cmd o Putty para poder conectarnos a nuestra máquina por ssh
+
 ### Configuración de OpenMediaVault
+
+Ya nos podemos conectar por ssh a nuestra maquina en mi caso utilizo Putty
 
 Primero debemos saber que ip tiene nuestra rapsberry 
 
 Utilizamos el comando " ip a " para saber la IP de nuestra máquina:
 
-![image](https://user-images.githubusercontent.com/14905801/155123290-fcfc38ea-2318-4422-bf58-09b766504a8c.png)
+![image](https://user-images.githubusercontent.com/14905801/160607439-fef6f797-574d-4cef-989f-26857e199ba9.png)
 
-A continuación con el comando: 
+A continuación con el comando nos metemos a nuestra interfaz para poner nuestra IP estática del servidor: 
 ~~~ 
 sudo nano /etc/network/interfaces 
 ~~~
