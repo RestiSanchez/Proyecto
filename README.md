@@ -77,10 +77,12 @@ Cambiamos la contraseña una vez logeado con:
 passwd
 ~~~
 
-Ahora nos descargariamos el script desde github , haciendo un wget de este repositorio para coger el script
+Ahora nos descargariamos el script desde github , haciendo un wget de este repositorio para descargar y ejecutar el script
 
 ~~~
-wget -O - https://github.com/RestiSanchez/Proyecto/blob/d23b97822163d3426e702f7461cefe1766eb5bfb/OMV_script.sh | sudo bash
+wget -O - https://raw.githubusercontent.com/RestiSanchez/Proyecto/main/OMV_script.sh | sudo bash
+
+
 ~~~
 Con este script lo que hacemos es , actualizar los repositorios , activar el ssh que viene por defecto desactivado e instalar el OpenMediaVault desde consola.
 
