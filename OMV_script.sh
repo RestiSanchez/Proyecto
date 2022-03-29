@@ -2,21 +2,10 @@
 # Script instalacion OpenMediaVault #
 #####################################
 
-# Vemos los pasos que hace
-set -x
-
 # Actualizamos repositorios
 
 apt update 
 apt upgrade -y
-
-# Activo SSH
-
-systemctl enable ssh
-
-# Inicio SSH
-
-systemctl start ssh
 
 # Añadimos al usuario pi al grupo ssh por si hubiera algun problema
 
