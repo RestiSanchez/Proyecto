@@ -7,10 +7,6 @@
   - Como crear tu propio NAS con la Rapsberry Pi 4
   - Instalación de OpenMediaVault
   - Configuración de OpenMediaVault
-  - Configuración de certificados SSL
-  - Cambio de contrasñea de administrador
-  - Configuración de discos
-  - Configuración de perfil de usuario
   - Métodos para ingresar al servidor
   - Utilizar OpenVPN con OpenMediaVault
   - Conclusión
@@ -72,19 +68,42 @@ Lo metemos en nuestra tarjeta micro SD y a nuestra rapsberry , la iniciamos y no
 - Usuario: pi
 - Contraseña: raspberry
 
+
+El SSH lo podemos activar de dos maneras: 
+
+1.- De forma manual:
+  - Añadir en consola :
+  ~~~
+  sudo systemctl enable ssh
+  
+  sudo systemctl start ssh
+  ~~~
+2.- Volviendo a meter la tarjeta SD en el ordenador
+  - Creamos un archivo de texto y le quitamos la extension dejandolo como "ssh".
+  - Desconectamos la tarjeta y metemos la microSD en la rapsberry
+ 
+ De cualquiera de estas dos formas activamos el ssh de la máquina
+ 
+ #### Cambiamos la contraseña una vez logeado con:
+~~~
+passwd
+~~~
+ 
+#### Actualizamos repositorios
+~~~
+apt update 
+apt upgrade -y
+~~~
+
+#### Descargamos y ejecutamos script instalacion OMV
+
+wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript/raw/master/install | sudo bash
+
 Cambiamos la contraseña una vez logeado con:
 ~~~
 passwd
 ~~~
 
-Ahora nos descargariamos el script desde github , haciendo un wget de este repositorio para descargar y ejecutar el script
-
-~~~
-wget -O - https://raw.githubusercontent.com/RestiSanchez/Proyecto/main/OMV_script.sh | sudo bash
-~~~
-Con este script lo que hacemos es , actualizar los repositorios , activar el ssh que viene por defecto desactivado e instalar el OpenMediaVault desde consola.
-
-Esperamos que termine y abrimos un cmd o Putty para poder conectarnos a nuestra máquina por ssh
 
 ### Configuración de OpenMediaVault
 
@@ -96,24 +115,6 @@ Utilizamos el comando " ip a " para saber la IP de nuestra máquina:
 
 ![image](https://user-images.githubusercontent.com/14905801/160607439-fef6f797-574d-4cef-989f-26857e199ba9.png)
 
-A continuación con el comando nos metemos a nuestra interfaz para poner nuestra IP estática del servidor: 
-~~~ 
-sudo nano /etc/network/interfaces 
-~~~
-
-Escribimos nuestra IP estática del servidor
-
-![image](https://user-images.githubusercontent.com/14905801/155126059-c478a47e-cd03-41a9-951f-36818e22a7bb.png)
-
-Reiniciamos las interfaces de red para aplicar los cambios:
-
-~~~ 
-sudo /etc/init.d/networking restart 
-~~~
-
-![image](https://user-images.githubusercontent.com/14905801/160607727-58763e43-9a39-4c0e-8603-387854d5299b.png)
-
-
 Y procedemos a introducirla en nuestro navegador , nos pedirá un usuario y una contraseña para acceder , por defecto los credenciales de inicio de sesión son:
 
 Nombre de usuario: " admin "
@@ -121,53 +122,14 @@ Contraseña: " openmediavault "
 
 ![image](https://user-images.githubusercontent.com/14905801/155123476-ea2ac2c0-6bc1-471b-be0a-9f6cba4d2327.png)
 
-### Configuración certificados SSL
-
-Ya con acceso al servidor seguimos la siguiente ruta: "Sistema" -> "Opciones generales" -> "Conexión segura" 
-
-Para utilizar la conexión segura necesitas un certificado , para crear este certificado hay que entrar en "Sistema" -> "Certificados" y haz click sobre SSL , luego pulsa "Añadir" y "Guardar" tras ingresar los datos. Hay que habilitar el certificado en los ajustes generales y aplicar cambios.
-
-![image](https://user-images.githubusercontent.com/14905801/155127858-841c0ed5-a90f-4aaa-91a4-6f6d3944fe6d.png)
-
-Nos dirigimos a la primera ruta comentada de este apartado y habilitamos el SSL , seleccionando el certificado creado en el paso anterior:
-
-![image](https://user-images.githubusercontent.com/14905801/155128082-b2ac03ea-0ad6-4cc0-b07e-fbe6e4b5f27d.png)
-
-#### Cambio de contraseña de administrador
-
-Nos vamos a opciones generales , contraseña de administrador e ingresamos la nueva contraseña:
-
-![image](https://user-images.githubusercontent.com/14905801/155128757-bb521466-2b45-4850-912d-b99f0ef7371b.png)
-
-
-#### Configuración de discos 
-
-Una vez ingresado en nuestro navegador y accedido al servidor , seleccionamos discos en la parte izquierda para configurar los discos duros que podemos utilizar: 
-
-![image](https://user-images.githubusercontent.com/14905801/155126870-9451e155-0b36-4b84-bc63-c551c7a07c3b.png)
-
-Ahora nos vamos a Sistema de Archivos y pulsamos en añadir y seleccionamos el formato para inicializar los discos y el disco que queramos inicializar
-
-![image](https://user-images.githubusercontent.com/14905801/155285951-1865d0e5-78e6-44ff-9273-7091a3f016e0.png)
-
-Otra cosa que podemos apreciar aquí son las cuotas que se le pueden poner a usuario/s o grupo/s como podemos ver en la siguiente imagen , limitando la cantidad de datos que pueden meter en el disco.
-
-![image](https://user-images.githubusercontent.com/14905801/155287392-071c62c6-f853-4133-b09d-1f7b8d19ad3c.png)
-
-
-Y ahora nos vamos a Carpeta compartida y pulsamos en añadir y creamos nuestra carpeta o sistema de carpetas:
-
-![image](https://user-images.githubusercontent.com/14905801/155286444-451a0006-443a-43df-808b-336c249fc8c3.png)
-
-Tendremos una serie de permisos para cada usuario/grupo que depende de cada carpeta/s variarán según lo que deseemos hacer.
-
-#### Configuración de perfil de usuario
-
-Nos vamos a la opción " Usuario " . Seleccionamos la opción " Añadir " y rellenamos los datos.
-
-En este apartado podemos agregar y eliminar perfiles de acceso al server NAS , podemos modificar los permisos de acceso de estos perfiles. Despues de ingresar un usuario , lo seleccionamos y pulsamos en " Modificar acceso ". Podremos otogar o revocar permisos a los usuarios para que puedan moficar el contenido almacenado , permisos de solo lectura o ningun permiso.
 
 #### Métodos para ingresar al servidor
+
+**IMPORTANTE** 
+Mirar el repositorio con la configuración previa de algunos aspectos necesarios de OpenMediaVault:
+
+https://github.com/RestiSanchez/OpenMediaVault.git
+
 
 - Linux -> Accedemos al administrador de archivos y seleccionamos "Conectar al servidor" , cuando nos pida ingresar una dirección tendremos que introducir un prefijo "sbm://" Por lo que quedaria algo asi:
 
@@ -187,41 +149,12 @@ Y ya estariamos accediendo a nuestro servidor NAS de nuestra Rapsberry Pi!
 
 ### Utilizar OpenVPN con OpenMediaVault 
 
-#### Instalación OpenVPN
 
-Lo primero que necesitamos es para instalar PiVPN en nuestro sistema raspian
-~~~
-curl -L https://install.pivpn.io | bash
-~~~
-Una vez finalizado , se iniciara el asistente de instalación con distintos parametros:
 
-Pasos a seguir dentro del asistente:
-1. Ok
-2. Ok
-3. No para utilizar la IP estática (Tabulador para moverse entre opciones)
-4. Ok
-5. Ok
-6. Elegimos el usuario pi y Ok
-7. Seleccionamos OpenVPN(Con espacio) y pulsamos Ok
-8. Pulsamos en Yes para seleccionar las opciones personalizadas
-9. Seleccionamos TCP y pulsamos OK
-10. Ahora nos pide un puerto que necesitamos abrir en nuestro router en nuestro caso vamos a utilzar el puerto 1194 que lo tengo abierto en mi router pero podeis utilizar cualquier puerto que no vayais a utilizar con otro servicio.
-11. Pulsamos Yes para aceptar
-12. Ahora en la lista de DNS que aparece bajamos y seleccionamos la opción de Custom , pulsamos Ok
-13. Ahora introducimos las DNS de nuestra compañia , pulsamos en Ok
-14. Pulsamos Yes
-15. Ahora nos pide si tenemos algún dominio , pulsamos que no 
-16. En este paso nos pide si vamos a utilizar nuestra IP publica o un DNS , en mi caso prefiero utilizar una entrada DNS como https://www.duckdns.org para generar mi DNS gratuito
-17. Nos pregunta si es correcto y pulsamos en yes
-18. Pulsamos en Yes para configurar el tamaño del certificado
-19. Aqui elegimos 256 , si queremos mas seguridad a costa de la velocidad podemos aumentar el tamaño y pulsamos en Ok , ahora la clave se generará
-20. Ahora nos da información sobre que tenemos que abrir el puerto que hemos puesto a internet y que es recomendable activar las actualizaciones desatendidas , pulsamos en Ok
-21. Activamos las actualizaciones desantendidas y pulsamos en Yes
-22. Ya estaría instalado PiVPN , ahora nos preguntará si queremos reiniciar despues de la instalación y pulsamos en Yes
 
-#### Añadir una VPN
 
-Una vez reiniciado el dispositivo , iniciamos sesión y escribimos:
+
+
 
 ## Conclusión
 
@@ -257,23 +190,3 @@ Se puede abrir el asistente utilizando
 ### DUDAS SOBRE INSTALACIÓN
 
 ### Instalación OpenMediaVault
-
-![image](https://user-images.githubusercontent.com/14905801/155089913-f13a57da-cfa6-4d5c-a1ca-ad2ef4c67606.png)
-
-Comenzamos con la instalación una vez iniciada nuestra rapsberry , automáticamente avanza hasta instalar , seleccionamos el idioma y el teclado que vamos a utilizar , comenzará a cargar la configuración de red:
-
-![image](https://user-images.githubusercontent.com/14905801/155090431-80780900-7cff-475d-903b-46e40c917138.png)
-
-Escribimos el nombre del dominio o del grupo de trabajo que estás utilizando:
-
-![image](https://user-images.githubusercontent.com/14905801/155090693-7f89295a-b78d-43db-b3d2-c3c76ef26baa.png)
-
-Avanzamos y ahora nos pide ingresar una contraseña para el usuario root , se puede dejar en blanco , creandote un usuario con permisos de administrador utilizando la orden " sudo " de forma automática
-
-![image](https://user-images.githubusercontent.com/14905801/155091176-4bc9d6af-4926-4cd7-9c7c-4c67d207e5aa.png)
-
-Volvemos a meter la contraseña para su verificación e ingresamos la zona horaria donde estamos , una vez seleccionada la zona , comenzará la instalación:
-
-![image](https://user-images.githubusercontent.com/14905801/155091469-51c51845-a4f6-4ad3-882d-0557a30f00df.png)
-
-Una vez finalizada pulsamos en continuar y se nos inciará OpenMediaVault
