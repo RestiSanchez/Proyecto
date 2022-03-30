@@ -206,6 +206,10 @@ Se puede abrir el asistente utilizando
 - https://www.youtube.com/watch?v=UDGtzAncVMI
 - https://profile.es/blog/que_es_docker/
 - https://ahorasomos.izertis.com/solidgear/portainer-io-monitorea-y-administra-docker-de-manera-sencilla-e-intuitiva/
+- https://hub.docker.com/r/linuxserver/heimdall
+- https://hub.docker.com/r/linuxserver/duplicati
+- https://hub.docker.com/r/containrrr/watchtower
+- https://hub.docker.com/r/linuxserver/qbittorrent
 
 
 
