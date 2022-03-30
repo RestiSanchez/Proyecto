@@ -1,0 +1,18 @@
+version: "2.1"
+services:
+  qbittorrent:
+    image: linuxserver/qbittorrent
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Madrid
+      - WEBUI_PORT=8989
+    volumes:
+      - /srv/dev-disk-by-uuid-7212C3C612C38E13/Docker/qbittorrent/appdata/config:/config
+      - /srv/dev-disk-by-uuid-7212C3C612C38E13/Docker/qbittorrent/downloads:/downloads
+    ports:
+      - 6881:6881
+      - 6881:6881/udp
+      - 8989:8989
+    restart: unless-stopped
