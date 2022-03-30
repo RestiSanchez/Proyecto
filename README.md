@@ -130,25 +130,43 @@ Mirar el repositorio con la configuración previa de algunos aspectos necesarios
 
 https://github.com/RestiSanchez/OpenMediaVault.git
 
+Para acceder a la aplicacion web ingresamos la ip en nuestro navegador
+
+Acceder desde un equipo cliente:
 
 - Linux -> Accedemos al administrador de archivos y seleccionamos "Conectar al servidor" , cuando nos pida ingresar una dirección tendremos que introducir un prefijo "sbm://" Por lo que quedaria algo asi:
 
 Ejemplo: 
 ~~~
-sbm://192.168.1.36
+sbm://ip_de_nuestro_servidor
 ~~~
 
 - Windows -> Nos vamos al explorador de archivos y en la ubicación escribimos el prefijo "\\":
 
 Ejemplo: 
 ~~~
-\\192.168.1.36
+\\ip_de_nuestro_servidor
 ~~~
 
 Y ya estariamos accediendo a nuestro servidor NAS de nuestra Rapsberry Pi!
 
-### Utilizar OpenVPN con OpenMediaVault 
+### Instalamos Docker y Portainer
 
+#### ¿Qué es Docker y para qué sirve?
+
+Docker es una plataforma creada con el fin de desarrollar, implementar y ejecutar aplicaciones dentro de contenedores. Lo cual permite a los desarrolladores realizar el empaquetado de nuestras aplicaciones junto a sus correspondientes dependencias dentro de una unidades estandarizadas conocidas bajo el término de contenedores de software.
+
+#### ¿Qué es Portainer y para qué sirve?
+
+Portainer es una herramienta web open-source la cual se ejecuta ella misma como un container, por tanto deberemos tener Docker instalado. Esta aplicación nos va a permitir gestionar de forma muy fácil e intuitiva nuestros contenedores Docker a través de una interfaz gráfica.
+
+Para las tareas de administración de contenedores Docker, a veces la línea de comandos puede hacerse algo dura para realizar ciertas acciones. A través de una interfaz web, un administrador puede tener una visión global más clara de los contenedores que está ejecutando y facilitar su gestión.
+
+#### ¿Dónde lo instalamos?
+
+![image](https://user-images.githubusercontent.com/14905801/160883597-01a7b277-640d-43a1-991e-28605ade5dc5.png)
+
+Menu -> Sistema -> OMV-Extras e instalamos los dos servicios con la aplicacion Web
 
 
 
@@ -162,6 +180,8 @@ Para empezar me gustaria comentar el punto de vista dentro de una empresa:
 Me parece un recurso bastante útil para realizar copias de seguridad a los equipos de forma autónoma y se guarde en red en un disco duro de este equipo. Además cada trabajador puede tener su propia carpeta dentro de otro disco duro donde almacenar datos que se utilizan a diario. Es nuestro propio servidor de almacenamiento en red muy económico , pero es muy útil si queremos tener separadas nuestras copias de seguridad o si se necesita acceder al contenido desde varios equipos sin depender de un server dedicado.
 
 Para las copias de seguridad y que puedan trabajar con esos archivos trabajaria directamente en una red interna para que solo los trabajadores de esa empresa se pudieran conectar. Además se podría añadir tu propia VPN como he explicado con anterioridad para aumentar la seguridad y también la productividad pudiendo trabajar y acceder a los recursos en red desde cualquier punto con conexion a Internet.
+
+Además gracias a la utilización de docker y portainer puedes aumentar los microservicios que puede ofrecer nuestro servidor de OpenMediaVault 
 
 ### Asistente de configuración de OpenMediaVault
 
@@ -184,6 +204,8 @@ Se puede abrir el asistente utilizando
 - https://eloutput.com/productos/gadgets/raspberry-pi-nas-ventajas-desventajas/
 - https://nefele.dev/blog/gestor-de-dns-dinamicas-duckdns/#:~:text=Para%20crear%20nuestra%20dirección%20DDns,queramos%20para%20nuestro%20subdomino%20DDns.
 - https://www.youtube.com/watch?v=UDGtzAncVMI
+- https://profile.es/blog/que_es_docker/
+- https://ahorasomos.izertis.com/solidgear/portainer-io-monitorea-y-administra-docker-de-manera-sencilla-e-intuitiva/
 
 
 
