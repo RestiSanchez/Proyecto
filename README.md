@@ -210,6 +210,7 @@ Se puede abrir el asistente utilizando
 - https://hub.docker.com/r/linuxserver/duplicati
 - https://hub.docker.com/r/containrrr/watchtower
 - https://hub.docker.com/r/linuxserver/qbittorrent
+- https://docs.docker.com/samples/wordpress/
 
 
 
