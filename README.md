@@ -8,7 +8,9 @@
   - Instalación de OpenMediaVault
   - Configuración de OpenMediaVault
   - Métodos para ingresar al servidor
-  - Utilizar OpenVPN con OpenMediaVault
+  - Instalación de Docker y Portainer
+  - Utilizar WireGuard con OpenMediaVault
+  - Varios servicios instalados con Portainer
   - Conclusión
   - Fuentes
   - Ayuda con la instalación
@@ -48,7 +50,6 @@ Imagen rapsberry Pi 4
   - Una tarjeta microSD para la instalación 
 
 ### Instalación de OpenMediaVault
-
 
 
 ##### Proceso de instalación OpenMediaVault en MicroSD
@@ -216,4 +217,4 @@ Se puede abrir el asistente utilizando
 
 ### DUDAS SOBRE INSTALACIÓN
 
-### Instalación OpenMediaVault
+Mirar repositorio: https://github.com/RestiSanchez/OpenMediaVault
