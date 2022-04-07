@@ -211,7 +211,25 @@ Me parece un recurso bastante útil para realizar copias de seguridad a los equi
 
 Para las copias de seguridad y que puedan trabajar con esos archivos trabajaria directamente en una red interna para que solo los trabajadores de esa empresa se pudieran conectar. Además se podría añadir tu propia VPN como he explicado con anterioridad para aumentar la seguridad y también la productividad pudiendo trabajar y acceder a los recursos en red desde cualquier punto con conexion a Internet.
 
-Además gracias a la utilización de docker y portainer puedes aumentar los microservicios que puede ofrecer nuestro servidor de OpenMediaVault 
+Además gracias a la utilización de docker y portainer puedes aumentar los microservicios que puede ofrecer nuestro servidor de OpenMediaVault como portainer , watchtower , duckdns , qbittorrent... entre otros.
+
+Si te decides por disfrutar de las ventajas de los servidores NAS deberías evaluar las ventajas y desventajas que puede tener su implementación mediante una Raspberry
+
+#### Ventajas
+- Barato
+- Bajo consumo
+- Aprendizaje durante el procedimiento de implementación
+- Tamaño compacto
+#### Desventajas
+- Limitaciones de rendimiento
+- Limitaciones de almacenamiento
+- Dificultad para la configuración y mantenimiento
+- Necesidad de tenerla siempre conectada a la red y a la alimentación (consumo)
+
+Al no ser un dispositivo dedicado a NAS, puede haber problemas si deseas usar la SBC para otros proyectos
+En conclusión, si necesitas un servicio NAS muy básico y barato temporal, la Raspberry Pi será tu mejor aliado para que no tengas que invertir demasiado dinero. En cambio, para servicios de mayor capacidad de almacenamiento, estabilidad, escalabilidad, y rendimiento, entonces lo mejor es adquirir tu propio servidor NAS o contratar un servicio de almacenamiento en la nube…
+
+
 
 ### Asistente de configuración de OpenMediaVault
 
