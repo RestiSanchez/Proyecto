@@ -184,6 +184,25 @@ Esta aplicación es muy útil cuando tienes un montón de contenedores corriendo
 
 Duckdns es un servicio de DNS dinámico , este contenedor nos brinda la posibilidad de convertir nuestra dirección IP pública en un dominio mas sencillo de recordar y mantenerlo actualizado siempre para que no tengamos que preocuparnos por si cambia nuestra IP pública
 
+#### Duplicati
+
+Es una aplicación para realizar copias de seguridad mediante una interfaz gráfica. Nos permitirá hacer copias de seguridad tanto a nivel local como en la nube , pudiendo utilizar servicios como Google Drive o Mega entre otros.
+
+#### qBittorrent
+
+Es un cliente P2P de codigo abierto para la red BitTorrent que se utiliza para subir y descargar contenido através de esta red. El contenedor de qBitTorrent levanta una aplicación web con una interfaz de fácil uso donde puedes crear torrents , comprimiendo mucho archivos pesados o descargarlos para guardarlos posteriormente en el disco duro del NAS
+
+#### Watchtower
+
+Es una aplicación que controlará tus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores. Si este servicio detecta que una imagen ha cambiado , se reiniciarña automáticamente el contenedor utilizando la nueva imagen. 
+
+Por lo que desplagará la nueva imagen , parará el contenedor y lo reiniciará con las mismas opciones que se usaron cuando se implemento originalmente.
+
+#### Wireguard
+
+Es un software libre que permite establecer una VPN con la cual se abre un túnel virtual entre dos ordenadores de internet por el que pasa la conexión de red. Gracias a ella puede regularse el acceso a recursos en red y proteger las transferencias de datos de los usuarios de cara al exterior
+
+Con este contenedor podremos conectarnos a nuestra raspberry pi para acceder al contenido del NAS o a los otros servicios de nuestro servidor
 
 ## Conclusión
 
