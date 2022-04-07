@@ -212,6 +212,7 @@ Se puede abrir el asistente utilizando
 - https://hub.docker.com/r/containrrr/watchtower
 - https://hub.docker.com/r/linuxserver/qbittorrent
 - https://docs.docker.com/samples/wordpress/
+- https://www.tecmint.com/manage-and-create-lvm-parition-using-vgcreate-lvcreate-and-lvextend/
 
 
 
