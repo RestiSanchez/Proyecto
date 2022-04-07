@@ -172,7 +172,17 @@ Menu -> Sistema -> OMV-Extras e instalamos los dos servicios con la aplicacion W
 
 
 
+### Otros contenedores instalados
 
+#### Heimdall
+
+Gracias a esta aplicación podemos tener una página de inicio donde puedes agrupar todos los accesos directos a tus aplicaciones docker. Es uno de los pocos contenedores con imágenes arm , por lo tanto compatible con nuestra RPi.
+
+Esta aplicación es muy útil cuando tienes un montón de contenedores corriendo y no recuerdas las url y puertos de cada aplicación.
+
+#### DuckDNS
+
+Duckdns es un servicio de DNS dinámico , este contenedor nos brinda la posibilidad de convertir nuestra dirección IP pública en un dominio mas sencillo de recordar y mantenerlo actualizado siempre para que no tengamos que preocuparnos por si cambia nuestra IP pública
 
 
 ## Conclusión
